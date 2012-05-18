@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>JSF Registration App</title>
+    </h:head>
+    <h:body>
+        <center>
+            <f:view>
+                <h:form>
+                    <h2>JSF Registration App</h2>
+                    <h4>Registration Form Conform</h4>
+                    <table border="0">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>First Name:</td>
+                                <td><h:outputText value="#{userBean.firstName}"/></td>
+                            </tr>
+                            <tr>
+                                <td>Last Name:</td>
+                                <td><h:outputText value="#{userBean.lastName}"/></td>
+                            </tr>
+                            <tr>
+                                <td>Sex:</td>
+                                <td><h:outputText value="#{userBean.sex}"/></td>
+                            </tr>
+                            <tr>
+                                <td>Date of Birth:</td>
+                                <td><h:outputText value="#{userBean.dob}"/></td>
+                            </tr>
+                            <tr>
+                                <td>Email Address:</td>
+                                <td><h:outputText value="#{userBean.email}"/></td>
+                            </tr>
+                            <tr>
+                                <td>Service Level:</td>
+                                <td><h:outputText value="#{userBean.serviceLevel}"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h:commandButton value="Edit" action="register" />
+                    <h:commandButton value="Confirm" action="#{userBean.addConfirmedUser}" />
+                </h:form>
+            </f:view>
+        </center>
+    </h:body>
+</html>
+
